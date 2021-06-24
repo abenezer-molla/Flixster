@@ -23,7 +23,11 @@
 @implementation MoviesViewController
 
 - (void)viewDidLoad {
+    
+    NSLog(@"Hi Aben");
     [super viewDidLoad];
+    
+    
     
     self.tableView.dataSource = self;
     

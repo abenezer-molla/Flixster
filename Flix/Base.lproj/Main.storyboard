@@ -54,6 +54,7 @@
                                             <outlet property="posterView" destination="uPl-iJ-XXQ" id="ozA-Ai-AWS"/>
                                             <outlet property="synopsisLable" destination="pO1-wx-Tbz" id="wT6-fQ-xVX"/>
                                             <outlet property="titleLable" destination="ecE-tS-afU" id="a6N-UD-IHP"/>
+                                            <segue destination="261-dY-v45" kind="show" id="sLN-Ad-XDf"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -70,6 +71,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="124.55357142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vFQ-yZ-27s">
+            <objects>
+                <viewController id="261-dY-v45" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CtS-81-EDp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="QNh-U2-6WN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ppN-4x-yVW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aF0-uP-loH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1764" y="125"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="koR-i8-HJK">

@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property(nonatomic, strong) UIRefreshControl *refreshControl;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 
@@ -56,6 +57,26 @@
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
            if (error != nil) {
                NSLog(@"%@", [error localizedDescription]);
+               UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"No Network"
+                                                                                          message:@"Please connect your device to a network source and try again."
+                                                                                   preferredStyle:(UIAlertControllerStyleAlert)];
+               // create a cancel action
+               UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel"
+                                                                   style:UIAlertActionStyleCancel
+                                                                 handler:^(UIAlertAction * _Nonnull action) {
+                                                                        // handle cancel response here. Doing nothing will dismiss the view.
+                                                                 }];
+               // add the cancel action to the alertController
+               [alert addAction:cancelAction];
+
+               // create an OK action
+               UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Try Again"
+                                                                  style:UIAlertActionStyleDefault
+                                                                handler:^(UIAlertAction * _Nonnull action) {
+                                                                        // handle response here.
+                                                                }];
+               // add the OK action to the alert controller
+               [alert addAction:okAction];
            }
            else {
                NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
@@ -89,6 +110,7 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self.activityIndicator startAnimating];
     
     MovieCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MovieCell"];
     
@@ -110,7 +132,9 @@
     
     cell.posterView.image = nil;
     [cell.posterView setImageWithURL:posterURl];
+    [self.activityIndicator stopAnimating];
     return cell;
+    
 }
 
 

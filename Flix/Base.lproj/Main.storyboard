@@ -20,9 +20,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <activityIndicatorView key="tableHeaderView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="nxv-H8-Occ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="37"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="color" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </activityIndicatorView>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="268" id="OoL-oT-fN3" customClass="MovieCell">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="268"/>
+                                        <rect key="frame" x="0.0" y="61.5" width="414" height="268"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OoL-oT-fN3" id="4id-af-Stu">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="268"/>
@@ -65,6 +70,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Aben Flixster" id="hBA-sD-33j"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="nxv-H8-Occ" id="9xj-dk-qtl"/>
                         <outlet property="tableView" destination="sAd-Wf-Age" id="9jU-8d-BtP"/>
                     </connections>
                 </viewController>

@@ -151,11 +151,11 @@
             </objects>
             <point key="canvasLocation" x="790" y="-891"/>
         </scene>
-        <!--Item-->
+        <!--Posters-->
         <scene sceneID="pwO-uv-gZ9">
             <objects>
                 <navigationController id="Ged-DI-hhE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="A29-sT-KNd"/>
+                    <tabBarItem key="tabBarItem" title="Posters" id="A29-sT-KNd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FZe-oZ-4KG">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -168,7 +168,7 @@
             </objects>
             <point key="canvasLocation" x="2088" y="89"/>
         </scene>
-        <!--Movies Grid View Controller-->
+        <!--Posters-->
         <scene sceneID="XZm-nB-0Gq">
             <objects>
                 <viewController id="CpF-wf-N7S" customClass="MoviesGridViewController" sceneMemberID="viewController">
@@ -205,6 +205,7 @@
                                         <size key="customSize" width="196" height="286"/>
                                         <connections>
                                             <outlet property="posterView" destination="GRB-8m-Zn3" id="CKU-ag-Z4w"/>
+                                            <segue destination="JFU-5E-Efv" kind="show" id="P2I-N6-wfx"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -213,7 +214,7 @@
                         <viewLayoutGuide key="safeArea" id="xGK-6y-asX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="qLO-Kc-Epm"/>
+                    <navigationItem key="navigationItem" title="Posters" id="qLO-Kc-Epm"/>
                     <connections>
                         <outlet property="collectionView" destination="3xN-uY-aOC" id="jyK-uX-fvN"/>
                     </connections>
@@ -221,6 +222,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aUv-r3-ila" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2095.6521739130435" y="912.72321428571422"/>
+        </scene>
+        <!--Poster Details-->
+        <scene sceneID="J9D-2f-QJM">
+            <objects>
+                <viewController id="JFU-5E-Efv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PYh-Ia-wqY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="M6P-Xr-H1W"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Poster Details" id="ezy-Wv-hXJ">
+                        <barButtonItem key="backBarButtonItem" title="Posters" id="7c1-n1-AQg"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cmA-7W-Rqw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2096" y="1686"/>
         </scene>
         <!--Now Playing-->
         <scene sceneID="koR-i8-HJK">

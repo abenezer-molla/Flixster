@@ -21,15 +21,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="sectionIndexBackgroundColor" systemColor="systemGray2Color"/>
-                                <activityIndicatorView key="tableHeaderView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="nxv-H8-Occ">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="37"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="color" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </activityIndicatorView>
+                                <color key="sectionIndexBackgroundColor" systemColor="systemGray3Color"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" text="" id="Pxz-mD-Sjq">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="268" id="OoL-oT-fN3" customClass="MovieCell">
-                                        <rect key="frame" x="0.0" y="61.5" width="414" height="268"/>
+                                        <rect key="frame" x="0.0" y="68.5" width="414" height="268"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OoL-oT-fN3" id="4id-af-Stu">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="268"/>
@@ -72,7 +72,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Aben Flixster" id="hBA-sD-33j"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="nxv-H8-Occ" id="9xj-dk-qtl"/>
+                        <outlet property="searchBarLabel" destination="Pxz-mD-Sjq" id="dbB-y1-ZEI"/>
                         <outlet property="tableView" destination="sAd-Wf-Age" id="9jU-8d-BtP"/>
                     </connections>
                 </viewController>
@@ -307,8 +307,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

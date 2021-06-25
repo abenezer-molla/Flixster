@@ -17,6 +17,9 @@
 
 @property(strong, nonatomic) NSArray *movies;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSArray *data;
+@property (strong, nonatomic) NSArray *filteredMovies;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBarLabel;
 
 @property(nonatomic, strong) UIRefreshControl *refreshControl;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
@@ -27,8 +30,19 @@
 
 - (void)viewDidLoad {
     
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Aben"]]];
+
+    
     NSLog(@"Hi Aben");
     [super viewDidLoad];
+    
+    
+    self.tableView.dataSource = self;
+    self.searchBarLabel.delegate = self;
+  
+
+
+
     
     
     
@@ -47,6 +61,37 @@
     // Do any additional setup after loading the view.
     
 
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.filteredMovies.count;
+}
+
+
+/// this function gets called whenever text changes -> Update filteredMovies
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    
+    if (searchText.length != 0) {
+        
+       // NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(NSDictionary *evaluatedObject, NSDictionary *bindings) {
+          //             return [evaluatedObject[@"original_title"] containsString:searchText];
+       //            }];
+        self.filteredMovies = self.movies;
+
+        
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(title CONTAINS[cd] %@)", searchText];
+    
+        self.filteredMovies = [self.movies filteredArrayUsingPredicate:predicate];
+        
+        NSLog(@"%@", self.filteredMovies);
+        
+    }
+    else {
+        self.filteredMovies = self.movies;
+    }
+    
+    [self.tableView reloadData];
+ 
 }
 
 - (void)fetchMovies{
@@ -91,6 +136,7 @@
                NSLog(@"%@",dataDictionary);
                
                self.movies = dataDictionary[@"results"];
+               self.filteredMovies = self.movies;
                
                for(NSDictionary *movie in self.movies) {
                    
@@ -98,6 +144,7 @@
                }
                
                [self.tableView reloadData];
+               
 
                // TODO: Get the array of movies
                // TODO: Store the movies in a property to use elsewhere
@@ -111,10 +158,8 @@
     
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    
-    return self.movies.count;
-}
+
+
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     [self.activityIndicator startAnimating];
@@ -123,7 +168,7 @@
     
     //UITableViewCell * cell = [[UITableViewCell alloc] init];
     
-    NSDictionary *movie = self.movies[indexPath.row];
+    NSDictionary *movie = self.filteredMovies[indexPath.row];
     
     cell.titleLable.text = movie[@"title"];
     

@@ -52,6 +52,8 @@ GIF created with [Kap](https://getkap.co/).
 
 ## Notes
 
+NB : my loading state works, my internet connection is fast, so I chnaged the color of activityIndicator to Red inorder to see that split second loading. And it is visible in the GIF. Watch it attentivly. 
+
 Describe any challenges encountered while building the app.
 
 brocken outlets. But once I learned how to fix them on the morning All Hands sessions, I was able to fix my own bugs. 

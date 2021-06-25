@@ -24,11 +24,14 @@
 @property(nonatomic, strong) UIRefreshControl *refreshControl;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
+
 @end
 
 @implementation MoviesViewController
 
 - (void)viewDidLoad {
+    
+    self.activityIndicator.backgroundColor = [UIColor grayColor];
     
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Aben"]]];
 
@@ -96,6 +99,8 @@
 
 - (void)fetchMovies{
     
+    [self.activityIndicator startAnimating];
+    
     NSURL *url = [NSURL URLWithString:@"https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10.0];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:nil delegateQueue:[NSOperationQueue mainQueue]];
@@ -162,7 +167,7 @@
 
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self.activityIndicator startAnimating];
+    
     
     MovieCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MovieCell"];
     
@@ -184,7 +189,9 @@
     
     cell.posterView.image = nil;
     [cell.posterView setImageWithURL:posterURl];
+    
     [self.activityIndicator stopAnimating];
+    
     return cell;
     
 }

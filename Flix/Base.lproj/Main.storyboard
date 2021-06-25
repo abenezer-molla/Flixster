@@ -66,12 +66,17 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="pI2-Mn-qFJ">
+                                <rect key="frame" x="171" y="507" width="48" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Aben Flixster" id="hBA-sD-33j"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="pI2-Mn-qFJ" id="2Jo-Mk-L37"/>
                         <outlet property="searchBarLabel" destination="Pxz-mD-Sjq" id="dbB-y1-ZEI"/>
                         <outlet property="tableView" destination="sAd-Wf-Age" id="9jU-8d-BtP"/>
                     </connections>

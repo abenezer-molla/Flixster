@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -135,7 +136,6 @@
         <!--Tab Bar Controller-->
         <scene sceneID="B0o-TP-sq7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="t5X-Hq-tuV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController id="QZs-Xw-c3f" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BsF-ZI-Ib3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -147,6 +147,7 @@
                         <segue destination="Ged-DI-hhE" kind="relationship" relationship="viewControllers" id="hcR-CV-kEy"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t5X-Hq-tuV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="790" y="-891"/>
         </scene>
@@ -167,21 +168,59 @@
             </objects>
             <point key="canvasLocation" x="2088" y="89"/>
         </scene>
-        <!--View Controller-->
+        <!--Movies Grid View Controller-->
         <scene sceneID="XZm-nB-0Gq">
             <objects>
-                <viewController id="CpF-wf-N7S" sceneMemberID="viewController">
+                <viewController id="CpF-wf-N7S" customClass="MoviesGridViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VRX-yR-6i2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3xN-uY-aOC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="DN2-8z-oda">
+                                    <size key="itemSize" width="196" height="286"/>
+                                    <size key="estimatedItemSize" width="204" height="386"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCollectionViewCell" id="wmu-9Y-GRL" customClass="MovieCollectionViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="196" height="286"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Mey-Jz-tTo">
+                                            <rect key="frame" x="0.0" y="0.0" width="196" height="286"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GRB-8m-Zn3">
+                                                    <rect key="frame" x="0.0" y="0.0" width="196" height="286"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <size key="customSize" width="196" height="286"/>
+                                        <connections>
+                                            <outlet property="posterView" destination="GRB-8m-Zn3" id="CKU-ag-Z4w"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="xGK-6y-asX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="qLO-Kc-Epm"/>
+                    <connections>
+                        <outlet property="collectionView" destination="3xN-uY-aOC" id="jyK-uX-fvN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aUv-r3-ila" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2097" y="913"/>
+            <point key="canvasLocation" x="2095.6521739130435" y="912.72321428571422"/>
         </scene>
         <!--Now Playing-->
         <scene sceneID="koR-i8-HJK">

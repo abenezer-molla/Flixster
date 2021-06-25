@@ -8,9 +8,13 @@
 #import "MoviesGridViewController.h"
 #import "MovieCollectionViewCell.h"
 #import "UIImageView+AFNetworking.h"
+
+#import "postersViewController.h"
 @interface MoviesGridViewController () <UICollectionViewDataSource, UICollectionViewDelegate>;
 @property(strong, nonatomic) NSArray *movies;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
+
 
 @end
 
@@ -113,6 +117,19 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     NSLog(@"tapped on a movie by aben");
+    
+    UITableView *tappedCell2 = sender;
+    NSIndexPath *indexPath2 = [self.collectionView indexPathForCell: tappedCell2];
+    
+    NSDictionary *movie2  = self.movies [indexPath2.row];
+    
+    postersViewController *postersViewController = [segue destinationViewController];
+    
+    
+    postersViewController.movie  = movie2;
+    
+    
+    
 }
 
 

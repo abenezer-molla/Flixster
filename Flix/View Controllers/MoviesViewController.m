@@ -13,7 +13,7 @@
 
 #import "UIImageView+AFNetworking.h"
 
-@interface MoviesViewController () <UITableViewDataSource, UITableViewDelegate>  
+@interface MoviesViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property(strong, nonatomic) NSArray *movies;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -31,10 +31,9 @@
 
 - (void)viewDidLoad {
     
-    self.activityIndicator.backgroundColor = [UIColor grayColor];
+    self.activityIndicator.backgroundColor = [UIColor redColor];
     
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Aben"]]];
-
+    self.view.backgroundColor  = [UIColor grayColor];
     
     NSLog(@"Hi Aben");
     [super viewDidLoad];

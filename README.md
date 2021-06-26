@@ -59,13 +59,23 @@ GIF created with [Kap](https://getkap.co/).
 
 ## Notes
 
-NB : my loading state works, my internet connection is fast, so I chnaged the color of activityIndicator to Red inorder to see that split second loading. And it is visible in the GIF. Watch it attentivly. 
+NB : my loading state works, my internet connection is fast, so I changed the color of activityIndicator to Red inorder to see that split second loading. And it is visible in the GIF. Watch it attentivly. You can also see it in the GIF where I was not connected to the WiFi- you can see the the middle that the loading was happening until I was connected once again and load the page. 
 
 Describe any challenges encountered while building the app.
 
 brocken outlets. But once I learned how to fix them on the morning All Hands sessions, I was able to fix my own bugs. 
 
-Also, I had problems with changing the backgroung color. I tried different methods incuding adding a picture as a background, but it is not working so far. 
+Also, I had problems with changing the backgroung color. I tried different methods incuding adding a picture as a background, but it is not working so far.
+
+I noticed that I usually forget to import, and that is something I had to go back and fix after looking at the error massage. 
+
+In general, this project helped me to develop a good debugging skill. 
+
+Also I had a challenge while working on the searhBar becuase I was loading the movie section from the movie and not from the filterMovies- it took me longer than I should have spent on to figure out my error. 
+
+Also one of the things I noticed in myself was creating a method and forgetting to call it inside the viewDidLoad. But that was an easy catch.
+
+
 
 ## Credits
 

@@ -1,3 +1,5 @@
+
+
 # Flixster
 Shows current movies
 
@@ -46,19 +48,38 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![ezgif com-resize](https://user-images.githubusercontent.com/57775399/123496453-ff704000-d5dc-11eb-9d43-906bb425805d.gif)
+![ezgif com-resize-3](https://user-images.githubusercontent.com/57775399/123496651-f03dc200-d5dd-11eb-8a05-55ada6456dc3.gif)
+
+![ezgif com-video-to-gif-3](https://user-images.githubusercontent.com/57775399/123496722-4e6aa500-d5de-11eb-89ce-48d30ce0266e.gif)
+
+
+
+
+![ezgif com-resize-4](https://user-images.githubusercontent.com/57775399/123497500-ac998700-d5e2-11eb-9a24-77d3842c85b2.gif)
+
 
 GIF created with [Kap](https://getkap.co/).
 
 ## Notes
 
-NB : my loading state works, my internet connection is fast, so I chnaged the color of activityIndicator to Red inorder to see that split second loading. And it is visible in the GIF. Watch it attentivly. 
+NB : my loading state works, my internet connection is fast, so I changed the color of activityIndicator to Red inorder to see that split second loading. And it is visible in the GIF. Watch it attentivly. You can also see it in the GIF where I was not connected to the WiFi- you can see the the middle that the loading was happening until I was connected once again and load the page. PS, the bouncing feature in the detail page is cool(ikr.)
 
 Describe any challenges encountered while building the app.
 
 brocken outlets. But once I learned how to fix them on the morning All Hands sessions, I was able to fix my own bugs. 
 
-Also, I had problems with changing the backgroung color. I tried different methods incuding adding a picture as a background, but it is not working so far. 
+Also, I had problems with changing the backgroung color. I tried different methods incuding adding a picture as a background, but it is not working so far.
+
+I noticed that I usually forget to import, and that is something I had to go back and fix after looking at the error massage. 
+
+In general, this project helped me to develop a good debugging skill. 
+
+Also I had a challenge while working on the searhBar becuase I was loading the movie section from the movie and not from the filterMovies- it took me longer than I should have spent on to figure out my error. 
+
+Also one of the things I noticed in myself was creating a method and forgetting to call it inside the viewDidLoad. But that was an easy catch.
+
+
 
 ## Credits
 

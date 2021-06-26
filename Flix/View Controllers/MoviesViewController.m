@@ -31,9 +31,9 @@
 
 - (void)viewDidLoad {
     
-    self.activityIndicator.backgroundColor = [UIColor redColor];
+    //self.activityIndicator.backgroundColor = [UIColor redColor];
     
-    self.view.backgroundColor  = [UIColor grayColor];
+    //self.view.backgroundColor  = [UIColor grayColor];
     
     NSLog(@"Hi Aben");
     [super viewDidLoad];

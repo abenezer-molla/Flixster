@@ -63,7 +63,7 @@ GIF created with [Kap](https://getkap.co/).
 
 ## Notes
 
-NB : my loading state works, my internet connection is fast, so I changed the color of activityIndicator to Red inorder to see that split second loading. And it is visible in the GIF. Watch it attentivly. You can also see it in the GIF where I was not connected to the WiFi- you can see the the middle that the loading was happening until I was connected once again and load the page. 
+NB : my loading state works, my internet connection is fast, so I changed the color of activityIndicator to Red inorder to see that split second loading. And it is visible in the GIF. Watch it attentivly. You can also see it in the GIF where I was not connected to the WiFi- you can see the the middle that the loading was happening until I was connected once again and load the page. PS, the bouncing feature in the detail page is cool(ikr.)
 
 Describe any challenges encountered while building the app.
 

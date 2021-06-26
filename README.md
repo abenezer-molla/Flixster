@@ -1,4 +1,4 @@
-![ezgif com-resize-3](https://user-images.githubusercontent.com/57775399/123496616-d4d2b700-d5dd-11eb-8ec2-32bb9cb2eb08.gif)
+
 # Flixster
 Shows current movies
 
@@ -50,7 +50,6 @@ Here's a walkthrough of implemented user stories:
 ![ezgif com-resize](https://user-images.githubusercontent.com/57775399/123496453-ff704000-d5dc-11eb-9d43-906bb425805d.gif)
 ![ezgif com-resize-3](https://user-images.githubusercontent.com/57775399/123496651-f03dc200-d5dd-11eb-8a05-55ada6456dc3.gif)
 
-![ezgif com-resize-2](https://user-images.githubusercontent.com/57775399/123496467-0e56f280-d5dd-11eb-9229-1f84517f6be4.gif)
 
 
 GIF created with [Kap](https://getkap.co/).
